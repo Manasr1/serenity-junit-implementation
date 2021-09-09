@@ -1,0 +1,33 @@
+package serenityswag.authentication;
+
+public enum User {
+
+    STANDARD_USER("standard_user","secret_sauce","a standard user"),
+    LOCKED_IN_USER("locked_out_user","secret_sauce","a locked out user"),
+    NETWORK_GLITCH_USER("performance_glitch_user","secret_sauce","a performance glitch user"),
+    PROBLEM_USER("problem_user","secret_sauce","a problem user");
+
+    private final String userName;
+    private final String password;
+    private final String description;
+
+    User(String userName,String password,String description) {
+        this.userName = userName;
+        this.password = password;
+        this.description = description;
+    }
+
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    @Override
+    public String toString() {
+        return description;
+    }
+}
